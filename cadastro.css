@@ -1,0 +1,85 @@
+body{
+    font-family: sans-serif;
+  
+}
+nav{
+    background-color:rgb(9, 163, 198);  
+    float: left;
+    width: 30%;
+    height: 100%;
+    box-shadow:  5px 0px 10px gray;
+    color: whitesmoke;
+    transition: width 3s;
+    overflow: hidden;
+    position: fixed;
+}
+nav ul{
+    padding: 0;
+}
+nav li{
+    list-style: none;
+    padding: 3px;
+}
+nav li:hover{
+    background-color: steelblue;
+    cursor: pointer;
+}
+
+main{
+    float: right;
+    width: 68%;
+    height: 100%;
+    transition: width 3s;
+    
+}
+
+    
+div{
+    padding: 5px;
+}
+input[type="text"],[type="email"],[type="date"]{
+width: 100%;
+}
+form{
+    
+    margin: auto;
+}
+.centro{
+    text-align: center;
+   
+}
+button{
+    background-color:rgb(9, 163, 198);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.menu_fechar{
+    width: 20px;
+    opacity: 0;
+    }
+    .menu_abrir{
+        width: 20px;
+        opacity: 0;
+    }
+@media(max-width:600px){
+    nav{
+        width: 0%;
+    }
+    main{
+        width: 100%;
+    }
+    .menu_fechar{
+       
+        opacity: 1;
+        }
+        .menu_abrir{
+           
+            opacity: 1;
+        }
+    }
+    .abre{
+        width: 40%;
+        height: 100%;
+    
+    }
+    
