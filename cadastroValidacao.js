@@ -1,5 +1,6 @@
 class Cadastro {
     validar() {
+        let mensagem = ""
         let nome = document.getElementById("nome").value
         let email = document.getElementById("email").value
         let sexo = document.querySelector("[name=sexo]:checked")
@@ -10,33 +11,37 @@ class Cadastro {
         let nascimento = document.getElementById("data").value
 
         if (nome == "") {
-            alert("Preencha o campo nome")
+            mensagem = "Preencha o campo nome\n"
         }
         if (email == "") {
-            alert("Preencha o campo e-mail")
+            mensagem = mensagem + "Preencha o campo e-mail\n"
         }
         if (sexo == null) {
-            alert("Preencha o campo sexo")
+            mensagem = mensagem + "Preencha o campo sexo\n"
         }
         if (estadoCivil == null) {
-            alert("Preencha o campo Estado Civil")
+            mensagem = mensagem + "Preencha o campo Estado Civil\n"
         }
         if (curso == null) {
-            alert("Preencha o campo curso")
+            mensagem = mensagem + "Preencha o campo curso\n"
         }
         if (estado == "") {
-            alert("Preencha o campo estado")
+            mensagem = mensagem + "Preencha o campo estado\n"
         }
         if (foto == undefined) {
-            alert("Preencha o campo foto")
+            mensagem = mensagem + "Preencha o campo foto\n"
         }
         else if (foto.size > 1048576) {
-            alert("Preencha a foto deve ter 1MB")
+            mensagem = mensagem + "Preencha a foto deve ter 1MB\n"
         } else if (foto.type != "image/png" && foto.type != "image/jpeg") {
-            alert("Preencha a foto em Fromato inválido")
+            mensagem = mensagem + "Preencha a foto em Formato inválido\n"
         }
         if (nascimento == "") {
-            alert("Informe a data do nascimento")
+            mensagem = mensagem + "Informe a data do nascimento\n"
+        }
+
+        if (mensagem != "") {
+            alert(mensagem)
         }
 
 
