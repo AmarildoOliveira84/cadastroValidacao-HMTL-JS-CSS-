@@ -41,7 +41,7 @@ class Cadastro {
         }
 
         if (mensagem != "") {
-            alert(mensagem)
+            document.getElementById("mensagem").innerText = mensagem
         }
 
 
